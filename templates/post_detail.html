@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="post-entry">
-        <h2>{{ blog_detail_view.title }}</h2>
-        <p>{{ blog_detail_view.body }}</p>
-    </div>
+  <div class="post-entry">
+    <h2>{{ object.title }}</h2>
+    <p>{{ object.body }}</p>
+  </div>
+  <p><a href="{% url 'post_edit' object.id %}">+ Edit Blog Post</a></p>
+  <p><a href="{% url 'post_delete' object.id %}">+ Delete Blog Post</a></p>
 
 {% endblock content %}
