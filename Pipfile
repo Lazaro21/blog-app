@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+whitenoise = "*"
+gunicorn = "==19.9.0"
 
 [dev-packages]
 
